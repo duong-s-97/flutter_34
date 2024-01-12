@@ -1,3 +1,4 @@
+import 'package:assingment_34/submit_form_module.dart';
 import 'package:flutter/material.dart';
 import 'package:assingment_34/carousel_module.dart';
 
@@ -16,20 +17,24 @@ class _TabsModule extends State<TabsModule> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(text: 'Palces'),
-                Tab(text: 'Inspriation'),
-                Tab(text: 'Emontion'),
-              ],
+            bottom: PreferredSize(
+              preferredSize: const Size.fromHeight(kToolbarHeight),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: const TabBar(
+                  tabAlignment: TabAlignment.start,
+                  tabs: [
+                    Tab(text: 'Places'),
+                    Tab(text: 'Inspiration'),
+                    Tab(text: 'Emotion'),
+                  ],
+                  isScrollable: true,
+                ),
+              ),
             ),
           ),
           body: const TabBarView(
-            children: [
-              CarouselModule(),
-              Text('Nội dung tab 2'),
-              Text('Nội dung Tab 3')
-            ],
+            children: [CarouselModule(), StudentList(), Text('Nội dung Tab 3')],
           ),
         ),
       ),

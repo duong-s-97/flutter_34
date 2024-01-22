@@ -1,4 +1,3 @@
-import 'package:assingment_34/submit_form_module.dart';
 import 'package:flutter/material.dart';
 import 'package:assingment_34/carousel_module.dart';
 
@@ -34,7 +33,11 @@ class _TabsModule extends State<TabsModule> {
             ),
           ),
           body: const TabBarView(
-            children: [CarouselModule(), StudentList(), Text('Nội dung Tab 3')],
+            children: [
+              CarouselModule(),
+              Text('Nội dung Tab 3'),
+              Text('Nội dung Tab 3')
+            ],
           ),
         ),
       ),
